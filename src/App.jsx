@@ -4,10 +4,10 @@ import Categories from './Categories'
 import items from './data'
 
 function App() {
-  const [menuItems, setMenuItems] = useState(items)
+	const [menuItems, setMenuItems] = useState(items)
 	return (
 		<main>
-			<section className='section'>
+			<section className='menu'>
 				<div className='title'>
 					<h2>our menu</h2>
 					<div className='underline'></div>
