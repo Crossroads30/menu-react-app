@@ -9,7 +9,7 @@ import items from './data'
 
 function App() {
 	const [menuItems, setMenuItems] = useState(items)
-	const [categories, setCategories] = useState([])
+	const [categories, setCategories] = useState(allCategories)
 
 	const filterItems = category => {
 		if (category === 'all') {
@@ -27,7 +27,7 @@ function App() {
 					<h2>our menu</h2>
 					<div className='underline'></div>
 				</div>
-				<Categories buttons={allCategories} filterItems={filterItems} />
+				<Categories buttons={categories} filterItems={filterItems} />
 				<Menu menuItems={menuItems} />
 			</section>
 		</main>
