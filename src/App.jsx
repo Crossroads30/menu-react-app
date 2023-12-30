@@ -16,9 +16,9 @@ function App() {
 		setMenuItems(newItems)
 	}
 
-	// useEffect(() => {
-	//   allCategories()
-	// }, [])
+  const allCategories = Array.from(new Set(items.map(item => item.category)))
+
+  // console.log(allCategories)
 
 	return (
 		<main>
@@ -27,7 +27,7 @@ function App() {
 					<h2>our menu</h2>
 					<div className='underline'></div>
 				</div>
-				<Categories filterItems={filterItems} />
+				<Categories buttons={allCategories} filterItems={filterItems} />
 				<Menu menuItems={menuItems} />
 			</section>
 		</main>
